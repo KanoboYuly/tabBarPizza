@@ -10,7 +10,8 @@ import UIKit
 
 class ServingsViewController: UIViewController {
     var final = Dictionary<String, String>()
-   
+    var ingredientes : Int = 0
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var jamonLabel: UILabel!
@@ -64,13 +65,19 @@ class ServingsViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        final ["Jamón"]  = self.jamonLabel.text
-        final ["Pepperoni"] = self.peperoniLabel.text
-        final ["Pavo"] = self.pavoLabel.text
-        final ["Salchicha"] = self.salchichasLabel.text
-        final ["Aceituna"] = self.aceitunaLabel.text
         let sigVista = segue.destinationViewController as! CookViewController
-        sigVista.pizaLista = final
+        
+        if (self.jamonLabel.text! != "0" || self.peperoniLabel.text! != "0" || self.pavoLabel.text! != "0" || self.salchichasLabel.text! != "0" || self.aceitunaLabel.text! != "0"){
+            final ["Jamón"]  = self.jamonLabel.text
+            final ["Pepperoni"] = self.peperoniLabel.text
+            final ["Pavo"] = self.pavoLabel.text
+            final ["Salchicha"] = self.salchichasLabel.text
+            final ["Aceituna"] = self.aceitunaLabel.text
+        } else {
+            sigVista.mensaje = "Sin ingredientes"
+        }
+        
+        sigVista.pizzaLista = final
     }
     
     override func didReceiveMemoryWarning() {

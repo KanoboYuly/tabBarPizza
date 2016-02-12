@@ -14,7 +14,7 @@ class CheeseTableViewController: UITableViewController {
     @IBOutlet var tableQueso: UITableView!
     
     var masa : String = " "
-    var tabBar : String = " "
+    var pizza : String = " "
     var tipoDeQueso =  ["Mozarela", "Cheddar", "Parmesano", "Sin queso"]
     var quesoImage: Array<UIImage> = [UIImage(named: "mozarela.png")!, UIImage(named: "cheddar.png")!, UIImage(named: "parmesano.png")!, UIImage(named: "sinQueso.png")! ]
     //var ingredientes : Dictionary <String> =
@@ -56,7 +56,7 @@ class CheeseTableViewController: UITableViewController {
         cell.textLabel?.font = UIFont.italicSystemFontOfSize(20)
         cell.imageView?.image = quesoImage[indexPath.row]
         
-        ingredientes ["Pizza"] = tabBar
+        ingredientes ["Pizza"] = pizza
         ingredientes ["Masa"] = masa
         ingredientes ["Queso"] = tipoDeQueso[indexPath.row]
         

@@ -26,10 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         // set colors of UITabBar elements
-        let normalTint: UIColor = UIColor.whiteColor()
+        /*let normalTint: UIColor = UIColor.whiteColor()
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: normalTint,NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 15)!], forState: UIControlState.Normal)
         UITabBar.appearance().backgroundImage = UIImage(named: "backgroundTB")
-        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        UITabBar.appearance().tintColor = UIColor.whiteColor()*/
         
          // Override point for customization after application launch.
         // Within your AppDelegate.swift in  didFinishLaunchingWithOptions:
